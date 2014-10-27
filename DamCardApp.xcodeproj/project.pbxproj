@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F313A3A619FE3E63005FFCFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313A3A519FE3E63005FFCFA /* AppDelegate.swift */; };
+		F313A3A819FE3E63005FFCFA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313A3A719FE3E63005FFCFA /* HomeViewController.swift */; };
+		F313A3AB19FE3E63005FFCFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F313A3A919FE3E63005FFCFA /* Main.storyboard */; };
+		F313A3AD19FE3E63005FFCFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F313A3AC19FE3E63005FFCFA /* Images.xcassets */; };
+		F313A3B019FE3E63005FFCFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F313A3AE19FE3E63005FFCFA /* LaunchScreen.xib */; };
+		F313A3BC19FE3E63005FFCFA /* DamCardAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313A3BB19FE3E63005FFCFA /* DamCardAppTests.swift */; };
+		F313A3C619FE3EC7005FFCFA /* PrefectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313A3C519FE3EC7005FFCFA /* PrefectureListViewController.swift */; };
+		F313A3C819FE3EFB005FFCFA /* DamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313A3C719FE3EFB005FFCFA /* DamsListViewController.swift */; };
+		F313A3CA19FE3F1F005FFCFA /* DamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313A3C919FE3F1F005FFCFA /* DamDetailViewController.swift */; };
+		F313A3CC19FE422C005FFCFA /* titleImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F313A3CB19FE422C005FFCFA /* titleImage.jpg */; };
+		F313A3CE19FE42D9005FFCFA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3CD19FE42D9005FFCFA /* AudioToolbox.framework */; };
+		F313A3D019FE42DF005FFCFA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3CF19FE42DF005FFCFA /* CFNetwork.framework */; };
+		F313A3D219FE42E5005FFCFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3D119FE42E5005FFCFA /* CoreGraphics.framework */; };
+		F313A3D419FE42EB005FFCFA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3D319FE42EB005FFCFA /* CoreLocation.framework */; };
+		F313A3D619FE42F2005FFCFA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3D519FE42F2005FFCFA /* libz.dylib */; };
+		F313A3D819FE4300005FFCFA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3D719FE4300005FFCFA /* MobileCoreServices.framework */; };
+		F313A3DA19FE430E005FFCFA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3D919FE430E005FFCFA /* QuartzCore.framework */; };
+		F313A3DC19FE4318005FFCFA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3DB19FE4318005FFCFA /* Security.framework */; };
+		F313A3DE19FE4320005FFCFA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3DD19FE4320005FFCFA /* StoreKit.framework */; };
+		F313A3E019FE4327005FFCFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3DF19FE4327005FFCFA /* SystemConfiguration.framework */; };
+		F313A3E419FE435D005FFCFA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3E119FE435D005FFCFA /* Bolts.framework */; };
+		F313A3E519FE435D005FFCFA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3E219FE435D005FFCFA /* Parse.framework */; };
+		F313A3E619FE435D005FFCFA /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3E319FE435D005FFCFA /* ParseFacebookUtils.framework */; };
+		F313A3E919FE4412005FFCFA /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F313A3E819FE4412005FFCFA /* Test.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F313A3B619FE3E63005FFCFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F313A39819FE3E62005FFCFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F313A39F19FE3E62005FFCFA;
+			remoteInfo = DamCardApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F313A3A019FE3E62005FFCFA /* DamCardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DamCardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F313A3A419FE3E63005FFCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F313A3A519FE3E63005FFCFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F313A3A719FE3E63005FFCFA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F313A3AA19FE3E63005FFCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F313A3AC19FE3E63005FFCFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F313A3AF19FE3E63005FFCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F313A3B519FE3E63005FFCFA /* DamCardAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DamCardAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F313A3BA19FE3E63005FFCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F313A3BB19FE3E63005FFCFA /* DamCardAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamCardAppTests.swift; sourceTree = "<group>"; };
+		F313A3C519FE3EC7005FFCFA /* PrefectureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefectureListViewController.swift; sourceTree = "<group>"; };
+		F313A3C719FE3EFB005FFCFA /* DamsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamsListViewController.swift; sourceTree = "<group>"; };
+		F313A3C919FE3F1F005FFCFA /* DamDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamDetailViewController.swift; sourceTree = "<group>"; };
+		F313A3CB19FE422C005FFCFA /* titleImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = titleImage.jpg; sourceTree = "<group>"; };
+		F313A3CD19FE42D9005FFCFA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F313A3CF19FE42DF005FFCFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F313A3D119FE42E5005FFCFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F313A3D319FE42EB005FFCFA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F313A3D519FE42F2005FFCFA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F313A3D719FE4300005FFCFA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F313A3D919FE430E005FFCFA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F313A3DB19FE4318005FFCFA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F313A3DD19FE4320005FFCFA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F313A3DF19FE4327005FFCFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F313A3E119FE435D005FFCFA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F313A3E219FE435D005FFCFA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F313A3E319FE435D005FFCFA /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F313A3E719FE4412005FFCFA /* DamCardApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DamCardApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		F313A3E819FE4412005FFCFA /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F313A39D19FE3E62005FFCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F313A3E019FE4327005FFCFA /* SystemConfiguration.framework in Frameworks */,
+				F313A3DE19FE4320005FFCFA /* StoreKit.framework in Frameworks */,
+				F313A3DC19FE4318005FFCFA /* Security.framework in Frameworks */,
+				F313A3DA19FE430E005FFCFA /* QuartzCore.framework in Frameworks */,
+				F313A3D819FE4300005FFCFA /* MobileCoreServices.framework in Frameworks */,
+				F313A3D619FE42F2005FFCFA /* libz.dylib in Frameworks */,
+				F313A3D419FE42EB005FFCFA /* CoreLocation.framework in Frameworks */,
+				F313A3D219FE42E5005FFCFA /* CoreGraphics.framework in Frameworks */,
+				F313A3E419FE435D005FFCFA /* Bolts.framework in Frameworks */,
+				F313A3D019FE42DF005FFCFA /* CFNetwork.framework in Frameworks */,
+				F313A3E519FE435D005FFCFA /* Parse.framework in Frameworks */,
+				F313A3CE19FE42D9005FFCFA /* AudioToolbox.framework in Frameworks */,
+				F313A3E619FE435D005FFCFA /* ParseFacebookUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F313A3B219FE3E63005FFCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F313A39719FE3E62005FFCFA = {
+			isa = PBXGroup;
+			children = (
+				F313A3E119FE435D005FFCFA /* Bolts.framework */,
+				F313A3E219FE435D005FFCFA /* Parse.framework */,
+				F313A3E319FE435D005FFCFA /* ParseFacebookUtils.framework */,
+				F313A3DF19FE4327005FFCFA /* SystemConfiguration.framework */,
+				F313A3DD19FE4320005FFCFA /* StoreKit.framework */,
+				F313A3DB19FE4318005FFCFA /* Security.framework */,
+				F313A3D919FE430E005FFCFA /* QuartzCore.framework */,
+				F313A3D719FE4300005FFCFA /* MobileCoreServices.framework */,
+				F313A3D519FE42F2005FFCFA /* libz.dylib */,
+				F313A3D319FE42EB005FFCFA /* CoreLocation.framework */,
+				F313A3D119FE42E5005FFCFA /* CoreGraphics.framework */,
+				F313A3CF19FE42DF005FFCFA /* CFNetwork.framework */,
+				F313A3CD19FE42D9005FFCFA /* AudioToolbox.framework */,
+				F313A3A219FE3E62005FFCFA /* DamCardApp */,
+				F313A3B819FE3E63005FFCFA /* DamCardAppTests */,
+				F313A3A119FE3E62005FFCFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F313A3A119FE3E62005FFCFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F313A3A019FE3E62005FFCFA /* DamCardApp.app */,
+				F313A3B519FE3E63005FFCFA /* DamCardAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F313A3A219FE3E62005FFCFA /* DamCardApp */ = {
+			isa = PBXGroup;
+			children = (
+				F313A3CB19FE422C005FFCFA /* titleImage.jpg */,
+				F313A3A519FE3E63005FFCFA /* AppDelegate.swift */,
+				F313A3A719FE3E63005FFCFA /* HomeViewController.swift */,
+				F313A3C519FE3EC7005FFCFA /* PrefectureListViewController.swift */,
+				F313A3C719FE3EFB005FFCFA /* DamsListViewController.swift */,
+				F313A3C919FE3F1F005FFCFA /* DamDetailViewController.swift */,
+				F313A3A919FE3E63005FFCFA /* Main.storyboard */,
+				F313A3AC19FE3E63005FFCFA /* Images.xcassets */,
+				F313A3AE19FE3E63005FFCFA /* LaunchScreen.xib */,
+				F313A3A319FE3E62005FFCFA /* Supporting Files */,
+				F313A3E819FE4412005FFCFA /* Test.m */,
+				F313A3E719FE4412005FFCFA /* DamCardApp-Bridging-Header.h */,
+			);
+			path = DamCardApp;
+			sourceTree = "<group>";
+		};
+		F313A3A319FE3E62005FFCFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F313A3A419FE3E63005FFCFA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F313A3B819FE3E63005FFCFA /* DamCardAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F313A3BB19FE3E63005FFCFA /* DamCardAppTests.swift */,
+				F313A3B919FE3E63005FFCFA /* Supporting Files */,
+			);
+			path = DamCardAppTests;
+			sourceTree = "<group>";
+		};
+		F313A3B919FE3E63005FFCFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F313A3BA19FE3E63005FFCFA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F313A39F19FE3E62005FFCFA /* DamCardApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F313A3BF19FE3E63005FFCFA /* Build configuration list for PBXNativeTarget "DamCardApp" */;
+			buildPhases = (
+				F313A39C19FE3E62005FFCFA /* Sources */,
+				F313A39D19FE3E62005FFCFA /* Frameworks */,
+				F313A39E19FE3E62005FFCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DamCardApp;
+			productName = DamCardApp;
+			productReference = F313A3A019FE3E62005FFCFA /* DamCardApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F313A3B419FE3E63005FFCFA /* DamCardAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F313A3C219FE3E63005FFCFA /* Build configuration list for PBXNativeTarget "DamCardAppTests" */;
+			buildPhases = (
+				F313A3B119FE3E63005FFCFA /* Sources */,
+				F313A3B219FE3E63005FFCFA /* Frameworks */,
+				F313A3B319FE3E63005FFCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F313A3B719FE3E63005FFCFA /* PBXTargetDependency */,
+			);
+			name = DamCardAppTests;
+			productName = DamCardAppTests;
+			productReference = F313A3B519FE3E63005FFCFA /* DamCardAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F313A39819FE3E62005FFCFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Fumitoshi Ogata";
+				TargetAttributes = {
+					F313A39F19FE3E62005FFCFA = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					F313A3B419FE3E63005FFCFA = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F313A39F19FE3E62005FFCFA;
+					};
+				};
+			};
+			buildConfigurationList = F313A39B19FE3E62005FFCFA /* Build configuration list for PBXProject "DamCardApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F313A39719FE3E62005FFCFA;
+			productRefGroup = F313A3A119FE3E62005FFCFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F313A39F19FE3E62005FFCFA /* DamCardApp */,
+				F313A3B419FE3E63005FFCFA /* DamCardAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F313A39E19FE3E62005FFCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F313A3AB19FE3E63005FFCFA /* Main.storyboard in Resources */,
+				F313A3B019FE3E63005FFCFA /* LaunchScreen.xib in Resources */,
+				F313A3CC19FE422C005FFCFA /* titleImage.jpg in Resources */,
+				F313A3AD19FE3E63005FFCFA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F313A3B319FE3E63005FFCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F313A39C19FE3E62005FFCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F313A3A819FE3E63005FFCFA /* HomeViewController.swift in Sources */,
+				F313A3C619FE3EC7005FFCFA /* PrefectureListViewController.swift in Sources */,
+				F313A3A619FE3E63005FFCFA /* AppDelegate.swift in Sources */,
+				F313A3E919FE4412005FFCFA /* Test.m in Sources */,
+				F313A3C819FE3EFB005FFCFA /* DamsListViewController.swift in Sources */,
+				F313A3CA19FE3F1F005FFCFA /* DamDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F313A3B119FE3E63005FFCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F313A3BC19FE3E63005FFCFA /* DamCardAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F313A3B719FE3E63005FFCFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F313A39F19FE3E62005FFCFA /* DamCardApp */;
+			targetProxy = F313A3B619FE3E63005FFCFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F313A3A919FE3E63005FFCFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F313A3AA19FE3E63005FFCFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F313A3AE19FE3E63005FFCFA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F313A3AF19FE3E63005FFCFA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F313A3BD19FE3E63005FFCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F313A3BE19FE3E63005FFCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F313A3C019FE3E63005FFCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DamCardApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DamCardApp/DamCardApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F313A3C119FE3E63005FFCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DamCardApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DamCardApp/DamCardApp-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F313A3C319FE3E63005FFCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DamCardAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DamCardApp.app/DamCardApp";
+			};
+			name = Debug;
+		};
+		F313A3C419FE3E63005FFCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DamCardAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DamCardApp.app/DamCardApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F313A39B19FE3E62005FFCFA /* Build configuration list for PBXProject "DamCardApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F313A3BD19FE3E63005FFCFA /* Debug */,
+				F313A3BE19FE3E63005FFCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F313A3BF19FE3E63005FFCFA /* Build configuration list for PBXNativeTarget "DamCardApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F313A3C019FE3E63005FFCFA /* Debug */,
+				F313A3C119FE3E63005FFCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F313A3C219FE3E63005FFCFA /* Build configuration list for PBXNativeTarget "DamCardAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F313A3C319FE3E63005FFCFA /* Debug */,
+				F313A3C419FE3E63005FFCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F313A39819FE3E62005FFCFA /* Project object */;
+}
