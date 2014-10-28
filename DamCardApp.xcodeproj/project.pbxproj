@@ -31,6 +31,8 @@
 		F313A3E519FE435D005FFCFA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3E219FE435D005FFCFA /* Parse.framework */; };
 		F313A3E619FE435D005FFCFA /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313A3E319FE435D005FFCFA /* ParseFacebookUtils.framework */; };
 		F313A3E919FE4412005FFCFA /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F313A3E819FE4412005FFCFA /* Test.m */; };
+		F3976FE719FE4C5700CBFC25 /* prefecture.json in Resources */ = {isa = PBXBuildFile; fileRef = F3976FE619FE4C5700CBFC25 /* prefecture.json */; };
+		F3976FE919FF5CEF00CBFC25 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3976FE819FF5CEF00CBFC25 /* json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F313A3E319FE435D005FFCFA /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		F313A3E719FE4412005FFCFA /* DamCardApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DamCardApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F313A3E819FE4412005FFCFA /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		F3976FE619FE4C5700CBFC25 /* prefecture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = prefecture.json; path = Config/prefecture.json; sourceTree = "<group>"; };
+		F3976FE819FF5CEF00CBFC25 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 		F313A3A219FE3E62005FFCFA /* DamCardApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3976FE819FF5CEF00CBFC25 /* json.swift */,
 				F313A3CB19FE422C005FFCFA /* titleImage.jpg */,
 				F313A3A519FE3E63005FFCFA /* AppDelegate.swift */,
 				F313A3A719FE3E63005FFCFA /* HomeViewController.swift */,
@@ -152,6 +157,7 @@
 				F313A3A319FE3E62005FFCFA /* Supporting Files */,
 				F313A3E819FE4412005FFCFA /* Test.m */,
 				F313A3E719FE4412005FFCFA /* DamCardApp-Bridging-Header.h */,
+				F3976FE619FE4C5700CBFC25 /* prefecture.json */,
 			);
 			path = DamCardApp;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				F313A3B019FE3E63005FFCFA /* LaunchScreen.xib in Resources */,
 				F313A3CC19FE422C005FFCFA /* titleImage.jpg in Resources */,
 				F313A3AD19FE3E63005FFCFA /* Images.xcassets in Resources */,
+				F3976FE719FE4C5700CBFC25 /* prefecture.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +292,7 @@
 				F313A3A819FE3E63005FFCFA /* HomeViewController.swift in Sources */,
 				F313A3C619FE3EC7005FFCFA /* PrefectureListViewController.swift in Sources */,
 				F313A3A619FE3E63005FFCFA /* AppDelegate.swift in Sources */,
+				F3976FE919FF5CEF00CBFC25 /* json.swift in Sources */,
 				F313A3E919FE4412005FFCFA /* Test.m in Sources */,
 				F313A3C819FE3EFB005FFCFA /* DamsListViewController.swift in Sources */,
 				F313A3CA19FE3F1F005FFCFA /* DamDetailViewController.swift in Sources */,
@@ -492,6 +500,7 @@
 				F313A3C119FE3E63005FFCFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F313A3C219FE3E63005FFCFA /* Build configuration list for PBXNativeTarget "DamCardAppTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				F313A3C419FE3E63005FFCFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

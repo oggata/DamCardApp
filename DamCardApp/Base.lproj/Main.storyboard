@@ -81,6 +81,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YXK-jq-8GN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CJF-xY-dDB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVu-qa-XGF">
@@ -92,7 +93,7 @@
                                     <rect key="frame" x="338" y="139" width="46" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="3YY-8q-d0x" kind="push" id="h5s-Qc-iyZ"/>
+                                    <segue destination="3YY-8q-d0x" kind="push" identifier="traditionToDamsListView" id="h5s-Qc-iyZ"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k3t-Go-aNE">
@@ -139,6 +140,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KLf-rH-2UA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eYT-QX-OtI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr5-YS-Mot">
@@ -153,20 +155,36 @@
                                     <segue destination="pnN-hN-J67" kind="push" id="kSb-ww-Qez"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pq6-Qr-SjQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="200" width="370" height="380"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="3YY-8q-d0x" id="JZ8-fi-pwu"/>
+                                    <outlet property="delegate" destination="3YY-8q-d0x" id="1z4-KZ-Mv8"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vr5-YS-Mot"/>
+                                <exclude reference="Pq6-Qr-SjQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vr5-YS-Mot"/>
+                                <include reference="Pq6-Qr-SjQ"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="FTu-jl-sPg"/>
+                    <connections>
+                        <outlet property="damsList" destination="Pq6-Qr-SjQ" id="CVn-z4-SS0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg4-hp-6mz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
