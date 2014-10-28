@@ -10,10 +10,15 @@ import UIKit
 
 class DamsListViewController: UIViewController {
     
+    var prefectureId = "";
+    var prefectureName = "";
+    
     @IBOutlet var damsList: UITableView!
     var damsData:NSArray = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+println(prefectureName)
         loadData()
         // Do any additional setup after loading the view, typically from a nib.
     }

@@ -65,6 +65,14 @@ class PrefectureListViewController: UIViewController {
         //requestURL = ArticleArray[indexPath.row][0]["url"]
         performSegueWithIdentifier("traditionToDamsListView",sender: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        println("lllllllllllllllll")
+        if (segue.identifier == "traditionToDamsListView") {
+            var destViewController: DamsListViewController = segue.destinationViewController as DamsListViewController
+            destViewController.prefectureName = "bbbbbbbbbbbb"
+        }
+    }
 }
 
 
