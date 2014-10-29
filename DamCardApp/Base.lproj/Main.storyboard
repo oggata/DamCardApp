@@ -286,6 +286,7 @@
                         <outlet property="addressLabel" destination="VEO-ZE-LZX" id="h0z-t8-I3z"/>
                         <outlet property="distDateLabel" destination="NrM-ln-gKh" id="rIy-L6-CeT"/>
                         <outlet property="distPlaceLable" destination="pSK-Aq-23q" id="F2f-Ls-bmf"/>
+                        <outlet property="mapView" destination="R6f-88-u2Y" id="gQE-bt-QTh"/>
                         <outlet property="nameLabel" destination="PVr-jT-O9h" id="RbR-lG-YA9"/>
                         <outlet property="urlLabel" destination="idP-Di-8Tw" id="Wn9-b3-eLf"/>
                     </connections>

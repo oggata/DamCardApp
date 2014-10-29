@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class DamDetailViewController: UIViewController {
     
@@ -23,6 +25,8 @@ class DamDetailViewController: UIViewController {
     var prefectureName : String?
     var address : String?
     var url : String?
+        
+    @IBOutlet var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +36,34 @@ class DamDetailViewController: UIViewController {
         self.distDateLabel?.text = distributionDate
         self.addressLabel?.text = address
         self.urlLabel?.text = url
+        
+        //初期位置を設定
+        var centerCoordinate : CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.665213,139.730011)
+        var centerPosition = MKCoordinateRegionMake(centerCoordinate,MKCoordinateSpanMake(0.003, 0.003))
+        mapView.setRegion(centerPosition,animated:true)
+        
+        CLGeocoder().geocodeAddressString(self.address, completionHandler: { (placemarks, error) -> Void in
+            if (error != nil) {println("reverse geodcode fail: \(error.localizedDescription)")}
+            if placemarks.count > 0 {
+                var placemark:CLPlacemark = placemarks[0] as CLPlacemark
+                var coordinates:CLLocationCoordinate2D = placemark.location.coordinate
+                
+                var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
+                pointAnnotation.coordinate = coordinates
+                pointAnnotation.title = self.damName as String!
+                pointAnnotation.subtitle = self.address as String!
+                self.mapView.addAnnotation(pointAnnotation)
+                self.mapView.selectAnnotation(pointAnnotation, animated: true)
+
+                self.mapView.centerCoordinate = coordinates
+                println("Added annotation to map view")
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
 }
