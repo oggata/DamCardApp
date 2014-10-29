@@ -12,11 +12,11 @@ import UIKit
 class PrefectureListViewController: UIViewController {
     
     @IBOutlet var prefectureList: UITableView!
-    typealias Prifecture = Dictionary<String, String>
-    var PrifecturesArray: [Prifecture] = [
-        ["name": "default", "en": "default"],
-    ]
+
+    var postPrefectureName:String?
         
+    var PrifecturesArray:Array<Dictionary<String,String>> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadJSONFile()
@@ -25,28 +25,30 @@ class PrefectureListViewController: UIViewController {
     func loadJSONFile() -> NSArray {
         var filePath:String? = NSBundle.mainBundle().pathForResource("prefecture",ofType:"json") as String?
         var err: NSError
-        
         var fileHandle : NSFileHandle = NSFileHandle(forReadingAtPath: filePath!)
         var acceptData : NSData = fileHandle.readDataToEndOfFile()
         let str = NSString(data:acceptData, encoding:NSUTF8StringEncoding)
         var hogeJson = JSON.parse(str)
         for (i, v) in hogeJson {
-            //println(v["name"].asString!)
-            //println(v["en"].asString!)
             var _data = [
+                "id":v["id"].asString!,
                 "name":v["name"].asString!,
                 "en":v["name"].asString!
             ]
             PrifecturesArray.append(_data)
         }
+        //ID順でソートする
+        sort(&PrifecturesArray) {
+            (a:Dictionary, b:Dictionary) -> Bool in
+            return a["id"] < b["id"]
+        }
         return PrifecturesArray
     }
-        
+            
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
  
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
         return PrifecturesArray.count as Int
@@ -59,18 +61,15 @@ class PrefectureListViewController: UIViewController {
         return cell
     }
     
-    
-    func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
-        //requestURL = "http://qiita.com/"
-        //requestURL = ArticleArray[indexPath.row][0]["url"]
+    func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {        
+        postPrefectureName = PrifecturesArray[indexPath.row]["name"]
         performSegueWithIdentifier("traditionToDamsListView",sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        println("lllllllllllllllll")
         if (segue.identifier == "traditionToDamsListView") {
             var destViewController: DamsListViewController = segue.destinationViewController as DamsListViewController
-            destViewController.prefectureName = "bbbbbbbbbbbb"
+            destViewController.prefectureName = postPrefectureName as String!
         }
     }
 }

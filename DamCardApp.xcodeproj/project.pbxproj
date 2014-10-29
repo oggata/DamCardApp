@@ -33,6 +33,8 @@
 		F313A3E919FE4412005FFCFA /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F313A3E819FE4412005FFCFA /* Test.m */; };
 		F3976FE719FE4C5700CBFC25 /* prefecture.json in Resources */ = {isa = PBXBuildFile; fileRef = F3976FE619FE4C5700CBFC25 /* prefecture.json */; };
 		F3976FE919FF5CEF00CBFC25 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3976FE819FF5CEF00CBFC25 /* json.swift */; };
+		F3976FEB1A00866600CBFC25 /* 120Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F3976FEA1A00866600CBFC25 /* 120Icon.png */; };
+		F3976FED1A00CBC500CBFC25 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3976FEC1A00CBC500CBFC25 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		F313A3E819FE4412005FFCFA /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		F3976FE619FE4C5700CBFC25 /* prefecture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = prefecture.json; path = Config/prefecture.json; sourceTree = "<group>"; };
 		F3976FE819FF5CEF00CBFC25 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		F3976FEA1A00866600CBFC25 /* 120Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120Icon.png; sourceTree = "<group>"; };
+		F3976FEC1A00CBC500CBFC25 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +88,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3976FED1A00CBC500CBFC25 /* MapKit.framework in Frameworks */,
+				F313A3D419FE42EB005FFCFA /* CoreLocation.framework in Frameworks */,
 				F313A3E019FE4327005FFCFA /* SystemConfiguration.framework in Frameworks */,
 				F313A3DE19FE4320005FFCFA /* StoreKit.framework in Frameworks */,
 				F313A3DC19FE4318005FFCFA /* Security.framework in Frameworks */,
 				F313A3DA19FE430E005FFCFA /* QuartzCore.framework in Frameworks */,
 				F313A3D819FE4300005FFCFA /* MobileCoreServices.framework in Frameworks */,
 				F313A3D619FE42F2005FFCFA /* libz.dylib in Frameworks */,
-				F313A3D419FE42EB005FFCFA /* CoreLocation.framework in Frameworks */,
 				F313A3D219FE42E5005FFCFA /* CoreGraphics.framework in Frameworks */,
 				F313A3E419FE435D005FFCFA /* Bolts.framework in Frameworks */,
 				F313A3D019FE42DF005FFCFA /* CFNetwork.framework in Frameworks */,
@@ -113,6 +118,7 @@
 		F313A39719FE3E62005FFCFA = {
 			isa = PBXGroup;
 			children = (
+				F3976FEC1A00CBC500CBFC25 /* MapKit.framework */,
 				F313A3E119FE435D005FFCFA /* Bolts.framework */,
 				F313A3E219FE435D005FFCFA /* Parse.framework */,
 				F313A3E319FE435D005FFCFA /* ParseFacebookUtils.framework */,
@@ -144,6 +150,7 @@
 		F313A3A219FE3E62005FFCFA /* DamCardApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3976FEA1A00866600CBFC25 /* 120Icon.png */,
 				F3976FE819FF5CEF00CBFC25 /* json.swift */,
 				F313A3CB19FE422C005FFCFA /* titleImage.jpg */,
 				F313A3A519FE3E63005FFCFA /* AppDelegate.swift */,
@@ -236,6 +243,7 @@
 				TargetAttributes = {
 					F313A39F19FE3E62005FFCFA = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = S5Z9R3TYZT;
 					};
 					F313A3B419FE3E63005FFCFA = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -269,6 +277,7 @@
 			files = (
 				F313A3AB19FE3E63005FFCFA /* Main.storyboard in Resources */,
 				F313A3B019FE3E63005FFCFA /* LaunchScreen.xib in Resources */,
+				F3976FEB1A00866600CBFC25 /* 120Icon.png in Resources */,
 				F313A3CC19FE422C005FFCFA /* titleImage.jpg in Resources */,
 				F313A3AD19FE3E63005FFCFA /* Images.xcassets in Resources */,
 				F3976FE719FE4C5700CBFC25 /* prefecture.json in Resources */,
@@ -374,6 +383,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "cb5f798c-5767-46a0-9f6e-3d8e8e8f4e73";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -409,6 +419,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "cb5f798c-5767-46a0-9f6e-3d8e8e8f4e73";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -419,13 +430,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DamCardApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DamCardApp/DamCardApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -436,13 +451,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DamCardApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DamCardApp/DamCardApp-Bridging-Header.h";
 			};
 			name = Release;
