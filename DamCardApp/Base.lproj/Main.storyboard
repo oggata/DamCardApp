@@ -373,21 +373,54 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="32" y="122" width="48" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cancelButtonDidTouch:" destination="5zf-vy-Y73" eventType="touchUpInside" id="M6E-3x-fsw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx0-r7-AsR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.84659476902173914" green="0.84659476902173914" blue="0.84659476902173914" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="249" width="257" height="128"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-66-BL0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="160" width="36" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendButtonDidTouch:" destination="5zf-vy-Y73" eventType="touchUpInside" id="Kll-zV-fRD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Yp2-cI-ghY"/>
+                                <exclude reference="kx0-r7-AsR"/>
+                                <exclude reference="JMb-66-BL0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Yp2-cI-ghY"/>
+                                <include reference="kx0-r7-AsR"/>
+                                <include reference="JMb-66-BL0"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="iqL-SQ-UlN"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="Yp2-cI-ghY" id="car-7p-Idh"/>
+                        <outlet property="inputComment" destination="kx0-r7-AsR" id="jpt-dA-W6u"/>
+                        <outlet property="sendButton" destination="JMb-66-BL0" id="5Hp-s3-poU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zM7-vl-XrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
