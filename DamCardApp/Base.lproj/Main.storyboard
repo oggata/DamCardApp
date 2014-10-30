@@ -319,13 +319,79 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="exJ-0u-Vov">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-TI-OO9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="WriteSomething">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="31" y="196" width="110" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="writeButtonDidTouch:" destination="gU8-bb-4IU" eventType="touchUpInside" id="AVE-c7-vOh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2c0-TI-OO9"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2c0-TI-OO9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="qgp-a8-wsM"/>
+                    <connections>
+                        <outlet property="writeButton" destination="2c0-TI-OO9" id="x68-qr-3Zh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJU-13-jYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3772.5" y="136"/>
+        </scene>
+        <!--Write Comment View Controller-->
+        <scene sceneID="fTP-kb-Nm5">
+            <objects>
+                <viewController id="5zf-vy-Y73" customClass="WriteCommentViewController" customModule="DamCardApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BUm-JQ-bGt"/>
+                        <viewControllerLayoutGuide type="bottom" id="kUg-rK-rol"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGa-g2-HqH">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yp2-cI-ghY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="122" width="48" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Yp2-cI-ghY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Yp2-cI-ghY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="iqL-SQ-UlN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zM7-vl-XrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3408" y="973"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6FQ-gg-Gbc">
@@ -344,6 +410,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gS-HT-GlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63" y="-557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Zk-yq-Klj">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Zv7-iW-VhL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ziv-Ro-asH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5zf-vy-Y73" kind="relationship" relationship="rootViewController" id="KD6-d5-yNW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGi-NQ-OBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2685" y="973"/>
         </scene>
     </scenes>
     <resources>

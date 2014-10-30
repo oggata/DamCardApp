@@ -36,6 +36,7 @@
 		F3976FEB1A00866600CBFC25 /* 120Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F3976FEA1A00866600CBFC25 /* 120Icon.png */; };
 		F3976FED1A00CBC500CBFC25 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3976FEC1A00CBC500CBFC25 /* MapKit.framework */; };
 		F39770241A02142100CBFC25 /* DamCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39770231A02142100CBFC25 /* DamCommentViewController.swift */; };
+		F39770261A02183B00CBFC25 /* WriteCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39770251A02183B00CBFC25 /* WriteCommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		F3976FEA1A00866600CBFC25 /* 120Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120Icon.png; sourceTree = "<group>"; };
 		F3976FEC1A00CBC500CBFC25 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F39770231A02142100CBFC25 /* DamCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamCommentViewController.swift; sourceTree = "<group>"; };
+		F39770251A02183B00CBFC25 /* WriteCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteCommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				F313A3E719FE4412005FFCFA /* DamCardApp-Bridging-Header.h */,
 				F3976FE619FE4C5700CBFC25 /* prefecture.json */,
 				F39770231A02142100CBFC25 /* DamCommentViewController.swift */,
+				F39770251A02183B00CBFC25 /* WriteCommentViewController.swift */,
 			);
 			path = DamCardApp;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				F313A3C619FE3EC7005FFCFA /* PrefectureListViewController.swift in Sources */,
 				F313A3A619FE3E63005FFCFA /* AppDelegate.swift in Sources */,
 				F3976FE919FF5CEF00CBFC25 /* json.swift in Sources */,
+				F39770261A02183B00CBFC25 /* WriteCommentViewController.swift in Sources */,
 				F313A3E919FE4412005FFCFA /* Test.m in Sources */,
 				F39770241A02142100CBFC25 /* DamCommentViewController.swift in Sources */,
 				F313A3C819FE3EFB005FFCFA /* DamsListViewController.swift in Sources */,
