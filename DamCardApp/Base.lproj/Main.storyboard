@@ -256,6 +256,18 @@
                                     <rect key="frame" x="49" y="189" width="307" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rn-8a-4IA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Comment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="232" width="68" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="gU8-bb-4IU" kind="push" id="Og4-4L-tR6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -267,6 +279,7 @@
                                 <exclude reference="idP-Di-8Tw"/>
                                 <exclude reference="pSK-Aq-23q"/>
                                 <exclude reference="NrM-ln-gKh"/>
+                                <exclude reference="3Rn-8a-4IA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -278,6 +291,7 @@
                                 <include reference="idP-Di-8Tw"/>
                                 <include reference="pSK-Aq-23q"/>
                                 <include reference="NrM-ln-gKh"/>
+                                <include reference="3Rn-8a-4IA"/>
                             </mask>
                         </variation>
                     </view>
@@ -294,6 +308,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRV-sI-eBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3075" y="136"/>
+        </scene>
+        <!--Dam Comment View Controller-->
+        <scene sceneID="Xmk-4G-XWg">
+            <objects>
+                <viewController id="gU8-bb-4IU" customClass="DamCommentViewController" customModule="DamCardApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bRQ-aO-tXf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nfd-CL-sPQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exJ-0u-Vov">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qgp-a8-wsM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJU-13-jYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3772.5" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6FQ-gg-Gbc">
