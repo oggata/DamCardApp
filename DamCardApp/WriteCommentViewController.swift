@@ -18,6 +18,8 @@ class WriteCommentViewController: UIViewController {
     @IBOutlet var sendButton: UIButton!
     @IBAction func sendButtonDidTouch(sender: AnyObject) {
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    
+        saveData()
     }
     
     @IBOutlet var inputComment: UITextView!
@@ -36,7 +38,25 @@ class WriteCommentViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
+    func saveData(){
+        Parse.setApplicationId("dBzkl9gkGPsQoyRHq5WOv9wzbUmK9QEhJXBpO6mf",clientKey: "HtkhZciPZ3p5M8elvwJBrI1ORvhBgU95bOSjCRJ2")
+println(self.inputComment!.text)
+        var dameComments:PFObject=PFObject(className: "DamComments")
+        dameComments.setObject(1, forKey: "DamId")
+        dameComments.setObject("aaaaaaaaaaaa", forKey: "Comment")
+        dameComments.setObject("ogahamu", forKey: "userName")
+        dameComments.saveInBackgroundWithBlock {
+            (success: Bool!,error: NSError!) -> Void in
+            if success==true {
+                //print("parse edildi score id = \(score.objectId) ")
+                println("success")
+            }else{
+                print(error)
+            }
+        }
+    }
 
 }
 
