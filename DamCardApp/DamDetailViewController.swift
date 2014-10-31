@@ -18,7 +18,7 @@ class DamDetailViewController: UIViewController {
     @IBOutlet var distPlaceLable: UILabel!
     @IBOutlet var distDateLabel: UILabel!
     
-    var damId : String?
+    var damId : Int?
     var damName : String?
     var distributionPlaceName : String?
     var distributionDate : String?
@@ -64,6 +64,13 @@ class DamDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "traditionToWriteCommentView" {
+            var destViewController: DamCommentViewController = segue.destinationViewController as DamCommentViewController
+            destViewController.damId = self.damId as Int!
+        }
     }
 
 }

@@ -81,6 +81,8 @@ println(prefectureName)
         //println("traditionToDamDetailView")
         if (segue.identifier == "traditionToDamDetailView") {
             var destViewController: DamDetailViewController = segue.destinationViewController as DamDetailViewController
+            
+            destViewController.damId = 1
             destViewController.damName = postDamName as String!
             destViewController.distributionPlaceName = postDistributionPlaceName as String!
             destViewController.distributionDate = postDistributionDate as String!

@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        /*
         Parse.setApplicationId("dBzkl9gkGPsQoyRHq5WOv9wzbUmK9QEhJXBpO6mf", clientKey: "HtkhZciPZ3p5M8elvwJBrI1ORvhBgU95bOSjCRJ2")
         if (PFUser.currentUser() == nil) {
             var loginAlert:UIAlertController = UIAlertController(title: "Sign UP / Loign", message: "Plase sign up or login", preferredStyle: UIAlertControllerStyle.Alert)
@@ -76,6 +77,7 @@ class HomeViewController: UIViewController {
             self.presentViewController(loginAlert, animated: true, completion: nil)
             
         }
+        */
     }
     
     func signIn(username:NSString, password:NSString) {

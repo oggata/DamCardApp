@@ -5,43 +5,89 @@
 //  Created by Fumitoshi Ogata on 2014/10/30.
 //  Copyright (c) 2014年 Fumitoshi Ogata. All rights reserved.
 //
-
-
 import UIKit
 
-class DamCommentViewController: UIViewController, UIViewControllerTransitioningDelegate {
-    
-    @IBOutlet var writeButton: UIButton!
+class DamCommentViewController: UIViewController,DamCommentViewControllerDelegate,UIViewControllerTransitioningDelegate {
 
+    var damId:Int? = 0
+    var commentData:NSArray = NSArray()
+
+    @IBOutlet var commentList: UITableView!
+    @IBOutlet var writeButton: UIButton!
     @IBAction func writeButtonDidTouch(sender: AnyObject) {
-println("did touch!!!!")
-        // 新しい View Controller をモーダル表示する
-        
+        //モーダルを表示する        
         let controller: UINavigationController! = self.storyboard?.instantiateViewControllerWithIdentifier("NavigationController") as? UINavigationController
         controller.modalPresentationStyle = .Custom
         controller.transitioningDelegate = self
+        
+        //ViewControllerにパラメータをsetする
+        var writeCommentViewController = controller.viewControllers![0] as WriteCommentViewController
+        writeCommentViewController.delegate = self
+        writeCommentViewController.damId = self.damId
+
         self.presentViewController(controller, animated: true, completion: {
         })
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        loadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // Parseからデータの取得
+    func loadData(){
+        Parse.setApplicationId("dBzkl9gkGPsQoyRHq5WOv9wzbUmK9QEhJXBpO6mf",clientKey: "HtkhZciPZ3p5M8elvwJBrI1ORvhBgU95bOSjCRJ2")
+
+        var query:PFQuery = PFQuery(className: "DamComments")
+        query.whereKey("DamId",equalTo:self.damId)
+        query.limit = 999
+        //query.orderByAscending("createdAt")
+        query.orderByDescending("createdAt")
+        
+        query.findObjectsInBackgroundWithBlock{
+            (objects:[AnyObject]!, error:NSError!)->Void in
+            if error != nil{
+                print(error)
+            }else{
+                self.commentData = objects
+                self.commentList.reloadData()
+            }
+        }
+    }
+    
+    func reloadCommentListTable(writeCommentViewController:WriteCommentViewController){
+        loadData()
+    }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController) -> UIPresentationController? {
         return CustomPresentationController(presentedViewController: presented, presentingViewController: presenting)
     }
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
+        return self.commentData.count as Int
+    }
+    
+    func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        cell.textLabel?.text = self.commentData[indexPath.row]["Comment"] as String?
+        return cell
+    }
+    
+    func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    }
+    
 }
-
-
 
 
 class CustomPresentationController: UIPresentationController {
@@ -113,6 +159,9 @@ class CustomPresentationController: UIPresentationController {
     func overlayDidTouch(sender: AnyObject) {
         self.presentedViewController.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+    
     
 }
 

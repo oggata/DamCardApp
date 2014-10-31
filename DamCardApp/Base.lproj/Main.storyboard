@@ -265,7 +265,7 @@
                                     <rect key="frame" x="304" y="232" width="68" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="gU8-bb-4IU" kind="push" id="Og4-4L-tR6"/>
+                                    <segue destination="gU8-bb-4IU" kind="push" identifier="traditionToWriteCommentView" id="Og4-4L-tR6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,27 +326,41 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="196" width="110" height="30"/>
+                                    <rect key="frame" x="31" y="107" width="110" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="writeButtonDidTouch:" destination="gU8-bb-4IU" eventType="touchUpInside" id="AVE-c7-vOh"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-te-FbZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="31" y="153" width="347" height="346"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="gU8-bb-4IU" id="kho-QB-NJf"/>
+                                    <outlet property="delegate" destination="gU8-bb-4IU" id="QCi-xY-nDJ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="2c0-TI-OO9"/>
+                                <exclude reference="H5R-te-FbZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="2c0-TI-OO9"/>
+                                <include reference="H5R-te-FbZ"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="qgp-a8-wsM"/>
                     <connections>
+                        <outlet property="commentList" destination="H5R-te-FbZ" id="Anb-Xf-8kR"/>
                         <outlet property="writeButton" destination="2c0-TI-OO9" id="x68-qr-3Zh"/>
                     </connections>
                 </viewController>
