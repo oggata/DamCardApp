@@ -13,6 +13,7 @@ class DamsListViewController: UIViewController {
     var prefectureId = "";
     var prefectureName = "";
     
+    var postDamId:Int?
     var postDamName:String?
     var postDistributionPlaceName : String?
     var postDistributionDate : String?
@@ -20,15 +21,11 @@ class DamsListViewController: UIViewController {
     var postAddress : String?
     var postUrl : String?
     
-    
     @IBOutlet var damsList: UITableView!
     var damsData:NSArray = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-println(prefectureName)
         loadData()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +45,6 @@ println(prefectureName)
                 //println("error occured")
                 //println(error)
             }else{
-                //println("got data")
                 let array:NSArray = objects
                 self.damsData = objects
                 self.damsList.reloadData()
@@ -68,6 +64,7 @@ println(prefectureName)
     }
     
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
+        postDamId = self.damsData[indexPath.row]["xlsManageId"] as Int?
         postDamName = self.damsData[indexPath.row]["name"] as String?
         postDistributionPlaceName = self.damsData[indexPath.row]["distributionPlaceName"] as String?
         postDistributionDate = self.damsData[indexPath.row]["distributionDate"] as String?
@@ -82,7 +79,7 @@ println(prefectureName)
         if (segue.identifier == "traditionToDamDetailView") {
             var destViewController: DamDetailViewController = segue.destinationViewController as DamDetailViewController
             
-            destViewController.damId = 1
+            destViewController.damId = postDamId as Int!
             destViewController.damName = postDamName as String!
             destViewController.distributionPlaceName = postDistributionPlaceName as String!
             destViewController.distributionDate = postDistributionDate as String!
