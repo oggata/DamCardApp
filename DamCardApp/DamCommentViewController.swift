@@ -9,12 +9,13 @@ import UIKit
 
 class DamCommentViewController: UIViewController,DamCommentViewControllerDelegate,UIViewControllerTransitioningDelegate {
 
-    var damId:Int? = 0
-    var commentData:NSArray = NSArray()
+        var damId:Int? = 0
+        var commentData:NSArray = NSArray()
 
-    @IBOutlet var commentList: UITableView!
-    @IBOutlet var writeButton: UIButton!
-    @IBAction func writeButtonDidTouch(sender: AnyObject) {
+        @IBOutlet var commentList: UITableView!
+        @IBOutlet var writeButton: UIButton!
+        @IBAction func writeButtonDidTouch(sender: AnyObject) {
+        
         //モーダルを表示する        
         let controller: UINavigationController! = self.storyboard?.instantiateViewControllerWithIdentifier("NavigationController") as? UINavigationController
         controller.modalPresentationStyle = .Custom
@@ -31,7 +32,6 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         loadData()
     }
@@ -48,13 +48,13 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
         query.limit = 999
         //query.orderByAscending("createdAt")
         query.orderByDescending("createdAt")
-        
         query.findObjectsInBackgroundWithBlock{
             (objects:[AnyObject]!, error:NSError!)->Void in
             if error != nil{
                 print(error)
             }else{
                 self.commentData = objects
+                self.commentList.rowHeight = UITableViewAutomaticDimension
                 self.commentList.reloadData()
             }
         }
@@ -73,13 +73,18 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
     }
     
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
-        //let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-        //cell.textLabel?.text = self.commentData[indexPath.row]["Comment"] as String?
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        cell.textLabel?.text = self.commentData[indexPath.row]["Comment"] as String?
+        // 行数無制限
+        cell.textLabel?.numberOfLines = 0;
+        // サイズを自動調整
+        cell.textLabel?.sizeToFit()
         
+        /*
         let cell: DamCommentsViewCell = self.commentList.dequeueReusableCellWithIdentifier("dam_comment_cell") as DamCommentsViewCell     
         var _comment:String = self.commentData[indexPath.row]["Comment"] as String!
         cell.setComment(_comment) 
-        
+        */
         return cell
     }
     
@@ -87,9 +92,8 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
 
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var text = self.commentData[indexPath.row]["Comment"] as String!
-        return 100
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -100,16 +104,35 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
 
 class DamCommentsViewCell: UITableViewCell {
     
-    //@IBOutlet var commentLabel: UILabel!
-
     @IBOutlet var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+
+    override func sizeThatFits(size: CGSize) -> CGSize {
+        var sizeThatFits = self.commentLabel!.sizeThatFits(size)
+        var width = CGFloat(640)
+        return CGSizeMake(width, sizeThatFits.height * 1.7);
+    }    
+
     func setComment(comment:String){
         commentLabel.text = comment
+        // 行数無制限
+        //commentLabel.numberOfLines = 0;
+        // サイズを自動調整
+        //commentLabel.sizeToFit()
+        
+        //ratingImageView.setImageWithURL(NSURL(string: business.ratingImageUrl))
+                
+        // 文字を詰めて改行する
+        //commentLabel.lineBreakMode = NSLineBreakMode.ByCharWrapping
+
+        //self.layoutIfNeeded()        
     }
 }
 
