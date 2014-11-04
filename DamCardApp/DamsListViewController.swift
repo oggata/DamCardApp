@@ -34,9 +34,7 @@ class DamsListViewController: UIViewController {
     }
     
     // Parseからデータの取得
-    func loadData(){
-        Parse.setApplicationId("dBzkl9gkGPsQoyRHq5WOv9wzbUmK9QEhJXBpO6mf",clientKey: "HtkhZciPZ3p5M8elvwJBrI1ORvhBgU95bOSjCRJ2")
-        
+    func loadData(){        
         var query:PFQuery = PFQuery(className: "Dams")
         query.whereKey("prefectureName", equalTo: prefectureName)
         query.findObjectsInBackgroundWithBlock{

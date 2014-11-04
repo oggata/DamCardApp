@@ -43,8 +43,6 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
 
     // Parseからデータの取得
     func loadData(){
-        Parse.setApplicationId("dBzkl9gkGPsQoyRHq5WOv9wzbUmK9QEhJXBpO6mf",clientKey: "HtkhZciPZ3p5M8elvwJBrI1ORvhBgU95bOSjCRJ2")
-
         var query:PFQuery = PFQuery(className: "DamComments")
         query.whereKey("DamId",equalTo:self.damId)
         query.limit = 999
@@ -75,8 +73,13 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
     }
     
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = self.commentData[indexPath.row]["Comment"] as String?
+        //let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        //cell.textLabel?.text = self.commentData[indexPath.row]["Comment"] as String?
+        
+        let cell: DamCommentsViewCell = self.commentList.dequeueReusableCellWithIdentifier("dam_comment_cell") as DamCommentsViewCell     
+        var _comment:String = self.commentData[indexPath.row]["Comment"] as String!
+        cell.setComment(_comment) 
+        
         return cell
     }
     
@@ -84,9 +87,30 @@ class DamCommentViewController: UIViewController,DamCommentViewControllerDelegat
 
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var text = self.commentData[indexPath.row]["Comment"] as String!
+        return 100
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
     }
     
+}
+
+
+class DamCommentsViewCell: UITableViewCell {
+    
+    //@IBOutlet var commentLabel: UILabel!
+
+    @IBOutlet var commentLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func setComment(comment:String){
+        commentLabel.text = comment
+    }
 }
 
 
@@ -158,11 +182,7 @@ class CustomPresentationController: UIPresentationController {
     // オーバーレイの View をタッチしたときに呼ばれる
     func overlayDidTouch(sender: AnyObject) {
         self.presentedViewController.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    
-    
-    
+    }    
 }
 
 

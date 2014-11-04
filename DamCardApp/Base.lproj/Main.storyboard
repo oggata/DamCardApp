@@ -90,7 +90,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="338" y="139" width="46" height="30"/>
+                                    <rect key="frame" x="344" y="72" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="3YY-8q-d0x" kind="push" identifier="traditionToDamsListView" id="h5s-Qc-iyZ"/>
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="201" width="368" height="384"/>
+                                    <rect key="frame" x="16" y="108" width="368" height="472"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="4wf-u4-Alo" id="NAY-sv-e2q"/>
@@ -149,7 +149,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="307" y="151" width="46" height="30"/>
+                                    <rect key="frame" x="345" y="64" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="pnN-hN-J67" kind="push" identifier="traditionToDamDetailView" id="kSb-ww-Qez"/>
@@ -159,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="200" width="370" height="380"/>
+                                    <rect key="frame" x="16" y="110" width="370" height="465"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="3YY-8q-d0x" id="JZ8-fi-pwu"/>
@@ -326,17 +326,50 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="107" width="110" height="30"/>
+                                    <rect key="frame" x="31" y="85" width="110" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="writeButtonDidTouch:" destination="gU8-bb-4IU" eventType="touchUpInside" id="AVE-c7-vOh"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-te-FbZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-te-FbZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dam_comment_cell" rowHeight="132" id="8Zo-C3-q30" customClass="DamCommentsViewCell" customModule="DamCardApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Zo-C3-q30" id="DuH-hm-3Ud">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comment" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrX-Sm-aLr">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="23" y="27" width="277" height="78"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="QrX-Sm-aLr"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="QrX-Sm-aLr"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="QrX-Sm-aLr" id="Uyz-Je-Va3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="153" width="347" height="346"/>
+                                    <rect key="frame" x="27" y="128" width="347" height="432"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="gU8-bb-4IU" id="kho-QB-NJf"/>
@@ -366,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJU-13-jYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3772.5" y="136"/>
+            <point key="canvasLocation" x="3772.5" y="134"/>
         </scene>
         <!--Write Comment View Controller-->
         <scene sceneID="fTP-kb-Nm5">
@@ -391,15 +424,6 @@
                                     <action selector="cancelButtonDidTouch:" destination="5zf-vy-Y73" eventType="touchUpInside" id="M6E-3x-fsw"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx0-r7-AsR">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.84659476902173914" green="0.84659476902173914" blue="0.84659476902173914" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="249" width="257" height="128"/>
-                                </variation>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-66-BL0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Send">
@@ -412,20 +436,29 @@
                                     <action selector="sendButtonDidTouch:" destination="5zf-vy-Y73" eventType="touchUpInside" id="Kll-zV-fRD"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx0-r7-AsR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.84659476902173914" green="0.84659476902173914" blue="0.84659476902173914" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="95" y="73" width="257" height="128"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Yp2-cI-ghY"/>
-                                <exclude reference="kx0-r7-AsR"/>
                                 <exclude reference="JMb-66-BL0"/>
+                                <exclude reference="kx0-r7-AsR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Yp2-cI-ghY"/>
-                                <include reference="kx0-r7-AsR"/>
                                 <include reference="JMb-66-BL0"/>
+                                <include reference="kx0-r7-AsR"/>
                             </mask>
                         </variation>
                     </view>

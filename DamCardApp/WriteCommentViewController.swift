@@ -47,7 +47,6 @@ class WriteCommentViewController: UIViewController {
     }
 
     func saveData(){
-        Parse.setApplicationId("dBzkl9gkGPsQoyRHq5WOv9wzbUmK9QEhJXBpO6mf",clientKey: "HtkhZciPZ3p5M8elvwJBrI1ORvhBgU95bOSjCRJ2")
         var dameComments:PFObject=PFObject(className: "DamComments")
         dameComments.setObject(self.damId, forKey: "DamId")
         dameComments.setObject(self.inputComment!.text, forKey: "Comment")
